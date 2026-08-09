@@ -1,0 +1,57 @@
+name: "Demande de fonctionnalité"
+description: "Proposer une nouvelle fonctionnalité ou amélioration"
+title: "[FEATURE] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Décrivez la fonctionnalité souhaitée. Plus c'est précis, plus vite on peut l'évaluer.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème à résoudre
+      description: Quel problème cette fonctionnalité résout-elle ?
+      placeholder: "En tant que [rôle], j'ai besoin de [fonctionnalité] pour [raison]..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution proposée
+      description: Comment imaginez-vous cette fonctionnalité ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives envisagées
+      description: Avez-vous considéré d'autres approches ?
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorité estimée
+      options:
+        - Critique (bloquant pour le business)
+        - Haute (impact significatif)
+        - Moyenne (amélioration notable)
+        - Basse (nice-to-have)
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Date souhaitée
+      description: Y a-t-il une échéance ?
+      placeholder: "Ex : Avant le 15 septembre 2026"
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte supplémentaire
+      description: Captures d'écran, maquettes, liens de référence...
